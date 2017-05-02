@@ -1,0 +1,15 @@
+# screen brightness found at /sys/class/backlight/acpi_video0/
+#	adjust by changing value of brightness file
+#	cannot be greater than value in max_brightness file
+
+# to get wifi up
+#	$ wifi-menu
+#	then select your wifi connection
+#	make sure the wifi interface is down
+#	- eg # ip link set wlp2s0 down
+
+# to get audio working
+#	$ yaourt -S alsa-utils
+#	add 'options snd_hda_intel index=1' to /etc/modprobe.d/default.conf
+#	reboot
+#	test with 'speaker-test -c 2'

@@ -1,0 +1,47 @@
+#################################
+#	 Volume Control 	#
+#################################
+# Increase volume 5% with Apple volume up
+"amixer set Master playback 5%+"
+	m:0x0 + c:123
+	XF86AudioRaiseVolume
+# Increase volume 5% with F12
+"amixer set Master playback 5%+"
+	m:0x0 + c:96
+
+# Decrease volume 5% with Apple volume down
+"amixer set Master playback 5%-"
+	m:0x0 + c:122
+	XF86AudioLowerVolume
+# Decrease volume 5% with F11
+"amixer set Master playback 5%-"
+	m:0x0 + c:95
+
+# Mute with Apple mute
+"amixer set Master toggle"
+	m:0x0 + c:121
+	XFAudioMute
+# Mute with F10
+"amixer set Master toggle"
+	m:0x0 + c:76
+
+#################################
+# 	Screen Adjustments	#
+#################################
+# Brighten Screen
+
+# Dim Screen
+
+#################################
+# 	Keyboard Adjustments	#
+#################################
+# Dim keyboard
+"kbdlight down"
+	m:0x0 + c:237
+	XF86KbdBrightnessUp
+
+# Brighten keyboard
+"kbdlight up"
+	m:0x0 + c:238
+	XF86KbdBrightnessDown
+
