@@ -1,0 +1,4 @@
+openvpn ricing contd.
+https://www.reddit.com/r/unixporn/comments/5tqman/2bwm_c_o_n_v_e_r_g_e/
+
+install htop and configure colors
