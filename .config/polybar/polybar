@@ -15,7 +15,7 @@ module-margin = 1
 
 font-0 = tty-hack:size=20;0
 
-modules-right = volume wireless-network wired-network battery date
+modules-right = volume wireless-network wired-network wanip battery date
 modules-left = temperature vpncheck
 
 [bar/bottom]
@@ -101,6 +101,11 @@ exec = pgrep openvpn
 interval = 5
 format-prefix = " "
 format-prefix-foreground = #5b
+
+[module/wanip]
+type = custom/script
+exec = ~/.config/polybar/wanip.sh
+interval = 5
 
 ; vim:ft=dosini
 
