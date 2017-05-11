@@ -13,3 +13,34 @@
 #	add 'options snd_hda_intel index=1' to /etc/modprobe.d/default.conf
 #	reboot
 #	test with 'speaker-test -c 2'
+
+# fix CPU issues with acpi interrupts
+#	---
+#	sudo nano /etc/systemd/system/suppress-gpe06.service
+#	---
+#	[Unit]
+#	Description=Disables GPE 06, an interrupt that is going crazy on my computer
+#
+#	[Service]
+#	ExecStart=/usr/bin/bash -c 'echo "disable" > 
+#	/sys/firmware/acpi/interrupts/gpe06'
+#
+#	[Install]
+#	WantedBy=multi-user.target
+#	---
+#	systemctl enable suppress-gpe06.service
+#	---
+#	sudo nano /etc/systemd/suppress-gpe06.service
+#	---
+#	[Unit]
+#	Description=Disables GPE 17, an interrupt that is going crazy on Macs
+#
+#	[Service]
+#	ExecStart=/usr/bin/bash -c 'echo "disable" > 
+#	/sys/firmware/acpi/interrupts/gpe17'
+#
+#	[Install]
+#	WantedBy=multi-user.target
+#	---
+#	systemctl enable suppress-gpe17.service
+
