@@ -16,7 +16,7 @@ module-margin = 1
 font-0 = tty-hack:size=20;0
 
 modules-right = volume wireless-network wired-network wanip battery date
-modules-left = temperature vpncheck
+modules-left = temperature
 
 [bar/bottom]
 monitor = eDP-1
@@ -95,17 +95,10 @@ thermal-zone = 1
 ; Default: 80
 warn-temperature = 80
 
-[module/vpncheck]
-type = custom/script
-exec = pgrep openvpn
-interval = 5
-format-prefix = " "
-format-prefix-foreground = #5b
-
 [module/wanip]
 type = custom/script
 exec = ~/.config/polybar/wanip.sh
-interval = 5
+interval = 2
 
 ; vim:ft=dosini
 

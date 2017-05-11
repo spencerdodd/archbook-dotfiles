@@ -5,7 +5,6 @@ rofi.padding: 400
 rofi.eh: 2
 rofi.font: tty-hack 20
 
-
 # Colors
 rofi.color-window: argb: 5a000000, argb: 5a000000, argb: 5a000000
 rofi.color-normal: argb: 5a273238, #c1c1c1, argb: 5a273238, argb: 5affffff, #000000
