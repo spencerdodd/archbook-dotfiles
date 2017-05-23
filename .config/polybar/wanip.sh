@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
-WANIP=`dig +short myip.opendns.com @resolver1.opendns.com`
+FAIL_STRING="dig: couldn't get address for 'resolver1.opendns.com': not found"
+WANIP=$(dig +short myip.opendns.com @resolver1.opendns.com 2>&1 | sed -e "s/$FAIL_STRING/no internet/g")
 
-# catching 'dig: couldn't resolve resolver1.open.dns.com' with no internet
-if [[ $WANIP == *"dig"* ]]
-then
-	echo "no internet"
 # if tun0 is up, openvpn is running, which should mean we're over VPN
-elif [[ `ip link` == *"tun0"* ]]
+if [[ `ip link` == *"tun0"* ]]
 then
 	echo "$WANIP (vpn)"
 # if wifi is up, then we should be connected to wifi
@@ -19,5 +16,5 @@ then
 	echo "$WANIP (eth)"
 # otherwise, nothing is up besides loopback, so no internet
 else
-	echo "no internet"
+	echo "$WANIP (no interfaces)"
 fi
