@@ -196,8 +196,9 @@ exec /usr/bin/compton -b --config ~/.compton.conf
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # background
-exec_always --no-startup-id /usr/bin/feh --bg-fill ~/photos/steps.jpg
+exec_always --no-startup-id /usr/bin/feh --bg-fill ~/photos/dusty.jpg
 exec_always --no-startup-id /usr/bin/cp ~/photos/steps.jpg /tmp/screen.jpg
+
 
 
 #######################################################################

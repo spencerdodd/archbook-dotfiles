@@ -29,8 +29,12 @@
 # 	Screen Adjustments	#
 #################################
 # Brighten Screen
-
+# relies on function in .bashrc
+"brightness up"
+	m:0x0 + c:85
 # Dim Screen
+"brightness down"
+	m:0x0 + c:84
 
 #################################
 # 	Keyboard Adjustments	#
